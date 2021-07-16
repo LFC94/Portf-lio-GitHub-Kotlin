@@ -1,0 +1,2 @@
+rootProject.name = "Portfólio do GitHub"
+include ':app'
