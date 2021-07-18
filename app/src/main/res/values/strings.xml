@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Portfólio do GitHub</string>
     <string name="pesquisar">Pesquisar</string>
+    <string name="repositorio_privado">Repositorio Privado</string>
 </resources>

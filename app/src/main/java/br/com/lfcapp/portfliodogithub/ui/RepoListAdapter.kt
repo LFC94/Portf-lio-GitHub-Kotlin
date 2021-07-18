@@ -1,6 +1,8 @@
 package br.com.lfcapp.portfliodogithub.ui
 
+import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -30,6 +32,10 @@ class RepoListAdapter : ListAdapter<Repo, RepoListAdapter.ViewHolder>(DiffCallba
             binding.tvLanguage.text = item.language
             binding.chCount.text = item.stargazersCount.toString()
 
+            if (item.private) {
+                binding.clItem.setBackgroundColor(Color.RED)
+                binding.tvPrivate.setVisibility(View.VISIBLE)
+            }
             Glide.with(binding.root.context)
                 .load(item.owner.avatarURL).into(binding.imgAvatar)
         }

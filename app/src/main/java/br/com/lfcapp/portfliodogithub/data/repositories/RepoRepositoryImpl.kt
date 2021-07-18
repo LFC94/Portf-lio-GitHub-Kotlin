@@ -12,7 +12,7 @@ class RepoRepositoryImpl(private val service: GitHubService) : RepoRepository {
             val repoList = service.listRepos(user)
             emit(repoList)
         } catch (ex: HttpException) {
-            throw RemoteException(ex.message ?: "Nenhum usuario Localizado")
+            throw RemoteException(ex.message ?: "Houve Erro Desconhecido")
         }
 
     }

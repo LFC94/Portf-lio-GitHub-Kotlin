@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
+        viewModel.getRepoList("LFC94")
         binding.rvList.adapter = adapter
         viewModel.repos.observe(this) {
             when (it) {
