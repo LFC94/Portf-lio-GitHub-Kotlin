@@ -27,16 +27,11 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
-        Log.e(TAG,"onQueryTextSubmit $query")
         return true
     }
 
     override fun onQueryTextChange(newText: String?): Boolean {
-        Log.e(TAG,"onQueryTextChange $newText")
         return true
-    }
-    companion object{
-        private const val TAG = "Tag"
     }
 }
 
